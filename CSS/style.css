@@ -1,0 +1,17 @@
+:root {
+    --color-praimary:  #08A6E4;
+    --color-praimary-shadow: rgba(7, 172, 230);
+    --color-redish: #FB3B64;
+    --color-green: #55DFB4;
+    --color-black: #000000;
+    --color-gray: #A5A5A5;
+    --color-light-grey: #F7F7F7;
+    --color-white: #FFFFFF;
+    --logo-navelements-padding-top: 28px;
+    --font-Open-Sans: font-family: 'Open Sans', sans-serif;
+    --font-Raleway: font-family: 'Raleway', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
