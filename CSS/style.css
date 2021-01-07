@@ -1,6 +1,6 @@
 :root {
     --color-praimary:  #08A6E4;
-    --color-praimary-shadow: rgba(7, 172, 230);
+    --color-praimary-shadow: lightgray;
     --color-redish: #FB3B64;
     --color-green: #55DFB4;
     --color-black: #000000;
@@ -65,11 +65,13 @@
     font-size: 11px;
     text-transform: uppercase;
     line-height: 15px;
-    letter-spacing: 3.28px;
+    letter-spacing: 3px;
 }
 
 .menu__element:hover {
     border-bottom: 4px solid var(--color-praimary);
+    color: var(--color-black);
+    font-weight: bold;
 }
 
 .menu__element:active {
@@ -327,6 +329,23 @@ span {
     align-items: flex-end;
 }
 
+.background-image__iPhone {
+    background-color: var(--color-praimary);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+}
+
+/*.background-image__Macbook {*/
+/*    background-color: var(--color-redish);*/
+/*    width: 254px;*/
+/*    height: 254px;*/
+/*    border-radius: 50%;*/
+/*    background-position-x: left;*/
+/*    !*transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);*!*/
+/*}*/
+/*}*/
+
 .company-offer-box:last-of-type {
     background-color: var(--color-light-grey);
 }
@@ -430,7 +449,9 @@ span {
 
 .package:nth-of-type(2) {
     border-color: var(--color-praimary);
-    box-shadow: 2px 5px 8px var(--color-praimary-shadow);
+    box-shadow: 2px 2px 4px var(--color-praimary-shadow);
+    width: 400px;
+    margin: 0 40px;
 }
 
 .package:nth-of-type(2) .package_button {
@@ -535,7 +556,7 @@ form input[type="text"] {
     font-size: 11px;
     color: var(--color-praimary);
     font-weight: bold;
-    letter-spacing: 3.28px;
+    letter-spacing: 3px;
 }
 
 .checkbox input {
