@@ -1,0 +1,151 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+@import "../settings/mixins";
+//@import "../generic/base";
+
+
+.page-header {
+  background-color: $color-white;
+  box-shadow: 0 3px 6px $color-gray;
+  height: 70px;
+  width: 100%;
+  opacity: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 0 10px 20px;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: $color-praimary;
+    font-family: $font-Open-Sans;
+  }
+  ul {
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+    overflow: hidden;
+    background-color: $color-white;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  }
+  li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-align: left;
+    font-family: $font-Open-Sans;
+    color: $color-gray;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    &:hover,
+    &:active {
+      color: $color-black;
+      font-weight: bold;
+     }
+    &:after {
+      clear: both;
+      display: block;
+      content: "";
+    }
+  }
+
+  /* menu */
+
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    font-family: $font-Open-Sans;
+
+  }
+  /* menu icon */
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 34px;
+    position: relative;
+    //user-select: none;
+  }
+
+  .menu-icon .nav-icon {
+    background: $color-praimary;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 22px;
+  }
+
+  .menu-icon .nav-icon:before,
+  .menu-icon .nav-icon:after {
+    background: $color-black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+
+  .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+
+  /* menu btn */
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon:not(.steps) .nav-icon:before,
+  .menu-btn:checked ~ .menu-icon:not(.steps) .nav-icon:after {
+    top: 0;
+  }
+
+  @include tablet {
+    li {
+      float: left;
+    }
+    li a {
+      padding: 20px 30px;
+      &:hover {
+        border-bottom: 3px solid $color-praimary
+      }
+      &:active {
+        color: $color-black;
+        font-weight: bold;
+      }
+    }
+    .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+}
