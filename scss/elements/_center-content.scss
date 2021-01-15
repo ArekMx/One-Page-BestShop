@@ -1,0 +1,96 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+@import "../settings/mixins";
+
+
+.center-content {
+  max-width: 800px;
+}
+
+.title-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $font-Raleway;
+  padding: 5px;
+  .title {
+    font-size: 36px;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .widgets {
+
+    padding: 50px;
+    @include tablet {
+      display: flex;
+      background-color: cornflowerblue;
+    }
+    .widget {
+      padding: 10px 10px;
+      text-align: center;
+      .widget-icon {
+        padding: 15px;
+        display: inline-block;
+        justify-content: center;
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+      }
+      &-icon__Man {
+        background: $color-redish;
+      }
+
+      &-icon__Eye {
+        background: $color-praimary;
+      }
+
+      &-icon__Catalog {
+        background: $color-green;
+      }
+      &-icon__Man::after,
+      &-icon__Eye::after,
+      &-icon__Catalog::after {
+        position: relative;
+        display: flex;
+        width: 66px;
+        height: 36px;
+      }
+      &-icon__Man::after {
+        width: 44px;
+        height: 52px;
+        content: url("../assets/Person.svg");
+        top: -40%;
+        left: 40%;
+      }
+
+      &-icon__Eye::after {
+        width: 66px;
+        height: 36px;
+        content: url("../assets/Eye.svg");
+      }
+
+      &-icon__Catalog::after {
+        width: 52px;
+        height: 48px;
+        content: url("../assets/Catalog.svg");
+        top: -30%;
+        left: 40%;
+      }
+      &-statistics {
+        padding: 15px;
+        font-size: 20px;
+        letter-spacing: 6px;
+        font-weight: 800;
+        span {
+          letter-spacing: normal;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      &-info {
+        padding: 15px;
+      }
+    }
+  }
+}

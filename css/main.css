@@ -363,6 +363,7 @@ textarea {
 * {
   box-sizing: border-box;
   outline: none;
+  text-decoration: none;
 }
 
 .container {
@@ -391,7 +392,6 @@ textarea {
   font-size: 2em;
   padding: 10px 0 10px 20px;
   line-height: 1.5em;
-  text-decoration: none;
   color: #08A6E4;
   font-family: "Open Sans", sans-serif;
 }
@@ -403,21 +403,20 @@ textarea {
   background-color: #FFFFFF;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
-.page-header li a {
+.page-header ul li a {
   display: block;
   padding: 20px;
-  text-decoration: none;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   color: #A5A5A5;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
-.page-header li a:hover, .page-header li a:active {
+.page-header ul li a:hover, .page-header ul li a:active {
   color: #000000;
   font-weight: bold;
 }
-.page-header li a:after {
+.page-header ul li a:after {
   clear: both;
   display: block;
   content: "";
@@ -479,11 +478,16 @@ textarea {
   top: 0;
 }
 @media (min-width: 44rem) {
+  .page-header ul {
+    background: none;
+    box-shadow: none;
+  }
   .page-header li {
     float: left;
   }
   .page-header li a {
-    padding: 20px 30px;
+    font-size: 0.8em;
+    padding: 25px 30px;
   }
   .page-header li a:hover {
     border-bottom: 3px solid #08A6E4;
@@ -499,6 +503,157 @@ textarea {
   }
   .page-header .menu-icon {
     display: none;
+  }
+}
+
+.start-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-hero .hero {
+  color: #000000;
+  padding: 80px 0;
+  text-align: center;
+}
+.start-hero .hero .hero-info {
+  font-family: "Raleway", sans-serif;
+}
+.start-hero .hero .hero-info .hero-info__title {
+  font-size: 3em;
+}
+.start-hero .hero .hero-info .hero-into__text {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  padding: 20px 0 60px 0;
+}
+.start-hero .hero .hero-button {
+  background-color: #08A6E4;
+  width: 80vw;
+  height: 3em;
+  border-radius: 40px;
+  box-shadow: 2px 5px 7px #08A6E4;
+}
+.start-hero .hero .hero-button .hero-button__text {
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em;
+}
+@media (min-width: 44rem) {
+  .start-hero .hero {
+    justify-content: center;
+    align-items: center;
+  }
+  .start-hero .hero .hero-button {
+    width: 25em;
+  }
+  .start-hero .hero .hero-button__text {
+    padding: 2em;
+  }
+}
+
+.center-content {
+  max-width: 800px;
+}
+
+.title-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  padding: 5px;
+}
+.title-widget .title {
+  font-size: 36px;
+  padding-top: 100px;
+  text-align: center;
+}
+.title-widget .widgets {
+  padding: 50px;
+}
+@media (min-width: 44rem) {
+  .title-widget .widgets {
+    display: flex;
+    background-color: cornflowerblue;
+  }
+}
+.title-widget .widgets .widget {
+  padding: 10px 10px;
+  text-align: center;
+}
+.title-widget .widgets .widget .widget-icon {
+  padding: 15px;
+  display: inline-block;
+  justify-content: center;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+}
+.title-widget .widgets .widget-icon__Man {
+  background: #FB3B64;
+}
+.title-widget .widgets .widget-icon__Eye {
+  background: #08A6E4;
+}
+.title-widget .widgets .widget-icon__Catalog {
+  background: #55DFB4;
+}
+.title-widget .widgets .widget-icon__Man::after, .title-widget .widgets .widget-icon__Eye::after, .title-widget .widgets .widget-icon__Catalog::after {
+  position: relative;
+  display: flex;
+  width: 66px;
+  height: 36px;
+}
+.title-widget .widgets .widget-icon__Man::after {
+  width: 44px;
+  height: 52px;
+  content: url("../assets/Person.svg");
+  top: -40%;
+  left: 40%;
+}
+.title-widget .widgets .widget-icon__Eye::after {
+  width: 66px;
+  height: 36px;
+  content: url("../assets/Eye.svg");
+}
+.title-widget .widgets .widget-icon__Catalog::after {
+  width: 52px;
+  height: 48px;
+  content: url("../assets/Catalog.svg");
+  top: -30%;
+  left: 40%;
+}
+.title-widget .widgets .widget-statistics {
+  padding: 15px;
+  font-size: 20px;
+  letter-spacing: 6px;
+  font-weight: 800;
+}
+.title-widget .widgets .widget-statistics span {
+  letter-spacing: normal;
+  padding: 0;
+  margin: 0;
+}
+.title-widget .widgets .widget-info {
+  padding: 15px;
+}
+
+.main-photo-MacBook {
+  width: 100vw;
+}
+.main-photo-MacBook img {
+  background-size: contain;
+  width: 220%;
+}
+@media (min-width: 44rem) {
+  .main-photo-MacBook img {
+    width: 100%;
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

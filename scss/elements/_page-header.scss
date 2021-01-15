@@ -19,7 +19,6 @@
     font-size: 2em;
     padding: 10px 0 10px 20px;
     line-height: 1.5em;
-    text-decoration: none;
     color: $color-praimary;
     font-family: $font-Open-Sans;
   }
@@ -30,27 +29,27 @@
     overflow: hidden;
     background-color: $color-white;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
-  }
-  li a {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    text-align: left;
-    font-family: $font-Open-Sans;
-    color: $color-gray;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    &:hover,
-    &:active {
-      color: $color-black;
-      font-weight: bold;
-     }
-    &:after {
-      clear: both;
+    li a {
       display: block;
-      content: "";
+      padding: 20px;
+      text-align: left;
+      font-family: $font-Open-Sans;
+      color: $color-gray;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      &:hover,
+      &:active {
+        color: $color-black;
+        font-weight: bold;
+      }
+      &:after {
+        clear: both;
+        display: block;
+        content: "";
+      }
     }
   }
+
 
   /* menu */
 
@@ -126,11 +125,16 @@
   }
 
   @include tablet {
+    ul {
+      background: none;
+      box-shadow: none;
+    }
     li {
       float: left;
     }
     li a {
-      padding: 20px 30px;
+      font-size: .8em;
+      padding: 25px 30px;
       &:hover {
         border-bottom: 3px solid $color-praimary
       }
